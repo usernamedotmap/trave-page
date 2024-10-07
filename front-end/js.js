@@ -43,22 +43,27 @@ links.forEach(function (link) {
   };
 });
 
-// pop up ng text the image ko
+// modal function na 2
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const cards = document.querySelectorAll(".content-card");
+const images = [
+  "https://crissyannpalacio.wordpress.com/wp-content/uploads/2017/02/img_3397.jpg",
+  "https://triptheislands.com/wp-content/uploads/2016/09/Sapot.jpg",
+  "https://outoftownblog.com/wp-content/uploads/2021/12/Sunset-at-Luljettas-Hanging-Gardens-Spa-photo-via-FB-Page.jpeg",
+];
 
-//   const observer = new IntersectionObserver((entries) => {
-//     entries.forEach(function (entry) {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("animate");
-//       } else {
-//         entry.target.classList.remove("animate");
-//       }
-//     });
-//   });
+let currentImage = 0;
 
-//   cards.forEach(function (card) {
-//     observer.observe(card);
-//   });
-// });
+function openModal(index) {
+  currentImage = index;
+  document.getElementById('modalImage').src = images[currentImage];
+  document.getElementById('imageModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+}
+
+function nextImage() {
+  currentImage = (currentImage + 1) % images.length;
+  document.getElementById('modalImage').src = images[currentImage];
+}
