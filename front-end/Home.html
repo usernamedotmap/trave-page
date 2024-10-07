@@ -5,12 +5,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styes/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Trisheet</title>
   </head>
   <body>
+
+    <!-- navigation to ah-->
     <div class="container">
-      <header class="header-container">
+      <header class="header-container" id="header">
         <div class="background-blur"></div>
         <div class="header-container-main">
           <div class="header-wrapper-main">
@@ -19,9 +21,9 @@
             </div>
             <nav>
               <ul id="nav-list  ">
-                <li><a href="#">Home</a></li>
+                <li><a href="#header">Home</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#">Contacts</a></li>
               </ul>
             </nav>
@@ -29,6 +31,8 @@
         </div>
       </header>
 
+
+      <!-- ito naman yung gumagalaw yung picture-->
       <div class="pic-slider">
         <div class="pic-slider-main visible">
           <img
@@ -69,12 +73,14 @@
         </div>
       </div>
 
-      <section class="next">
+      <!-- dito na yung gallery-->
+
+      <section class="next" id="gallery">
         <div class="title">
-          <h1 class="heading">Rizal Place</h1>
+          <a href="#gallery"><h1 class="heading">Rizal Place</h1></a>
         </div>
 
-        <div class="image-container">
+        <div class="image-container" >
           <div class="image-wrapper">
             <div class="image-box">
               <a><img src="https://crissyannpalacio.wordpress.com/wp-content/uploads/2017/02/img_3397.jpg" alt="hello"/></a>
@@ -141,8 +147,11 @@
             </div>
           </div>
         </div>
-
       </section>
+
+
+      <!-- dito ka lagay contact or either once na click na yung contacts mag navigate siya sa isang page-->
+      <footer></footer>
 
      
 
