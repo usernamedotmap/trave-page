@@ -6,13 +6,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Trisheet</title>
   </head>
   <body>
 
     <!-- navigation to ah-->
     <div class="container">
-      <header class="header-container" id="header">
+      <header class="header-container" >
         <div class="background-blur"></div>
         <div class="header-container-main">
           <div class="header-wrapper-main">
@@ -24,7 +25,7 @@
                 <li><a href="#header">Home</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="#contacts">Contacts</a></li>
               </ul>
             </nav>
           </div>
@@ -33,7 +34,7 @@
 
 
       <!-- ito naman yung gumagalaw yung picture-->
-      <div class="pic-slider">
+      <div class="pic-slider" id="header">
         <div class="pic-slider-main visible">
           <img
             src="https://images.squarespace-cdn.com/content/v1/5fa1522044bdda192713063c/56ed074b-cfb4-4231-8b22-ea71d2eb1d3a/Daranak+Falls+in+Tanay%2C+Rizal"
@@ -164,7 +165,7 @@
 
 
       <!-- dito ka lagay contact or either once na click na yung contacts mag navigate siya sa isang page-->
-      <footer>
+      <footer id="contact">
  <div class="svg-container">
           <svg
             class="svg"
@@ -184,10 +185,27 @@
             ></path>
           </svg>
         </div>
-        <div>
-        <img src="https://jontotheworld.com/wp-content/uploads/2021/08/Wawa-Dam.jpg" alt="footer something"/>
-      </div>
+        
+        <div class="image-footer">
+          <div class="text-image">
+            <h1>I miss you</h1>
+          </div>
+               <img src="https://live.staticflickr.com/5836/29398755953_1a1256b3bd_o.jpg" alt="footer something"/>
+              </div>
+
+              <div class="contacts">
+                <div class="contacts-list">
+                  <ul>
+                    <li><a><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a><i class="fa-brands fa-tiktok"></i></i></a></li>
+                  </ul>
+                </div>
+              </div>
       </footer>
+
+    
 
      
 
