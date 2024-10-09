@@ -55,15 +55,18 @@ let currentImage = 0;
 
 function openModal(index) {
   currentImage = index;
-  document.getElementById('modalImage').src = images[currentImage];
-  document.getElementById('imageModal').style.display = 'flex';
+  document.getElementById("modalImage").src = images[currentImage];
+  document.getElementById("imageModal").style.display = "flex";
 }
 
 function closeModal() {
-  document.getElementById('imageModal').style.display = 'none';
+  document.getElementById("imageModal").style.display = "none";
 }
 
 function nextImage() {
   currentImage = (currentImage + 1) % images.length;
-  document.getElementById('modalImage').src = images[currentImage];
+  document.getElementById("modalImage").src = images[currentImage];
 }
+
+// animated bounce
+

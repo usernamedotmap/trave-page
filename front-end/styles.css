@@ -174,7 +174,7 @@ section {
     justify-content: center;
     gap: 2rem;
     height: 1000%;
-padding-bottom: 5rem;
+    padding-bottom: 5rem;
 
 
 
@@ -186,7 +186,7 @@ section .title {
     justify-content: center;
     align-items: center;
     gap: 0.9rem;
-    
+
 
 }
 
@@ -209,32 +209,33 @@ section .title .heading {
         color: #00b3ff;
         filter: blur(1px);
         text-shadow: 0 0 10px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 40px #00b3ff,
-        0 0 80px #00b3ff,
-        0 0 120px #00b3ff,
-        0 0 200px #00b3ff,
-        0 0 300px #00b3ff,
-        0 0 300px #00b3ff,
+            0 0 20px #00b3ff,
+            0 0 40px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 120px #00b3ff,
+            0 0 200px #00b3ff,
+            0 0 300px #00b3ff,
+            0 0 300px #00b3ff,
     }
 
     30%, 70% {
         color: white;
         filter: blur(1px);
         text-shadow: 0 0 10px #00b3ff,
-        0 0 20px #00b3ff,
-        0 0 40px #00b3ff,
-        0 0 80px #00b3ff,
-        0 0 120px #00b3ff,
-        0 0 200px #00b3ff,
-        0 0 300px #00b3ff,
-        0 0 300px #00b3ff,
+            0 0 20px #00b3ff,
+            0 0 40px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 120px #00b3ff,
+            0 0 200px #00b3ff,
+            0 0 300px #00b3ff,
+            0 0 300px #00b3ff,
     }
+
     100% {
 
         color: transparent;
         box-shadow: none;
-        filter : blur(2px) hue-rotate(2deg);
+        filter: blur(2px) hue-rotate(2deg);
     }
 }
 
@@ -257,7 +258,7 @@ section .title .heading:hover {
 section .image-container {
     width: 100%;
     max-width: 1300px;
-    
+
 
 }
 
@@ -444,20 +445,20 @@ footer .element-shape {
 }
 
 #contact .element-shape-2 {
-fill: grey;
+    fill: grey;
 
 
 }
 
 
-footer  .image-footer {
+footer .image-footer {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
 footer .image-footer .text-image {
-    
+
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -482,13 +483,13 @@ footer .image-footer img {
 
 .contacts {
     height: 50%;
-    width: 100%
-    /* background-color: black; */
+    width: 100%;
+    background-color: black;
 }
 
 .contacts .contacts-list {
     padding: 5rem 0;
-    
+
 }
 
 .contacts-list ul {
@@ -502,6 +503,37 @@ footer .image-footer img {
 
 .contacts-list li {
     list-style: none;
+    font-size: 25px;
+
+}
+
+.contacts-list ul li i {
+    color: white;
+}
+
+.contacts hr {
+    width: 80%;
+    margin: -1rem auto;
+    border-radius: 100%;
+    border-color: rgba(255, 255, 255, 0.35);
+    ;
+}
+
+
+.contacts .text-wrapper {
+   
+    height: 20%;
+    display: flex;
+    text-align: center;
+    margin: 6rem auto;
+    width: 80%;
+    line-height: 2;
+    font-style: italic;
    
 }
 
+
+.contacts .footer-text {
+    color:  rgba(187, 187, 187, 0.45);;
+    font-size: 17px;
+}
