@@ -1,3 +1,5 @@
+<!-- Gallery Component-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,9 +23,9 @@
             </div>
             <nav>
               <ul id="nav-list">
-                <li><a href="#header">Home</a></li>
+                <li><a href="./Home.html">Home</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="">Gallery</a></li>
+                <li><a href="./Home.html#gallery">Gallery</a></li>
                 <li><a href="#contact">Contacts</a></li>
               </ul>
             </nav>
@@ -32,12 +34,12 @@
       </header>
 
       <section>
-        <div class="gallery-container">
+        <div class="gallery-container" id="1" onclick="openModal(0)">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3B9ty3Xv7wYrUI9zACzOMJFwhszT346T6Oa_LQAG81ySprDGwtdxBm7ljU1Dhprv3_Kg&usqp=CAU"
           />
           <div class="description">
-            <h1>Ganda mo po</h1>
+            <h1>Labooo bo</h1>
             <p>
               One of the best places to see nature and animals in Thailand is at
               the Khao Sok National Park, which is not too far from Phuket and
@@ -52,7 +54,7 @@
             </p>
           </div>
         </div>
-        <div class="gallery-container">
+        <div class="gallery-container" id="2" onclick="openModal(1)">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrDAu5aJRQOSeQrcpMMp5fSVVEZELIuTMEQ&s"
           />
@@ -72,7 +74,7 @@
             </p>
           </div>
         </div>
-        <div class="gallery-container">
+        <div class="gallery-container" id="3" onclick="openModal(2)">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrDAu5aJRQOSeQrcpMMp5fSVVEZELIuTMEQ&s"
           />
@@ -94,14 +96,15 @@
         </div>
       </section>
 
-      <!-- <div class="modal" id="imageModal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-              <img id="modalImage"  />
-              <button class="prev" onclick="prevImage()">Mine</button>
-              <button class="next" onclick="nextImage()">Mines</button>
-            </div>
-          </div> -->
+      <!-- this is modal now baby quoee-->
+      <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <button class="prev" onclick="prevImage()">👈</button>
+            <img id="modalImage" /> 
+            <button class="next" onclick="nextImage()">👉</button>
+        </div>
+    </div>
 
       <footer id="contact">
         <div class="contacts">

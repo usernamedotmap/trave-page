@@ -9,8 +9,11 @@ function showSlide(index) {
   slides.forEach((slide) => {
     slide.classList.remove("visible");
   });
-
-  slides[index].classList.add("visible");
+  if (slides[index]) {
+    slides[index].classList.add("visible");
+  } else {
+    console.error("Missyou", index);
+  }
 }
 
 function nextSlide() {
@@ -43,7 +46,7 @@ links.forEach(function (link) {
   };
 });
 
-// modal function na 2
+// modal function na 2 hehehe
 
 const images = [
   "https://crissyannpalacio.wordpress.com/wp-content/uploads/2017/02/img_3397.jpg",
@@ -55,18 +58,95 @@ let currentImage = 0;
 
 function openModal(index) {
   currentImage = index;
-  document.getElementById("modalImage").src = images[currentImage];
-  document.getElementById("imageModal").style.display = "flex";
+  const modalImage = document.getElementById("modalImage");
+
+  if (modalImage) {
+    modalImage.src = images[currentImage];
+    document.getElementById("imageModal").style.display = "flex";
+  } else {
+    console.error("Cannot find modal image element.");
+  }
+
+  localStorage.setItem("modalOpen", "true");
+  localStorage.setItem("modalIndex", index);
 }
 
 function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
+  const modal = document.getElementById("imageModal");
+  if (modal) {
+    modal.style.display = "none";
+  } else {
+    console.error("Failed to close the modal.");
+  }
+
+  localStorage.removeItem("modalOpen");
+  localStorage.removeItem("modalIndex");
 }
+
+// para lang 2 sa ano kapag ni refresh hindi mawala yung modal
+// tapos yung mga localStorage kaparehas lang siya kapag nag store ka ng token
+// getchi?
+
+window.onload = function () {
+  const modalOpen = localStorage.getItem("modalOpen");
+  const modalIndex = localStorage.getItem("modalIndex");
+
+  if (modalOpen === "true" && modalIndex !== null) {
+    openModal(parseInt(modalIndex));
+  }
+};
 
 function nextImage() {
-  currentImage = (currentImage + 1) % images.length;
-  document.getElementById("modalImage").src = images[currentImage];
+  if (currentImage < images.length - 1) {
+    currentImage += 1;
+  } else {
+    currentImage = 0;
+  }
+
+  openModal(currentImage);
 }
 
-// animated bounce
+function prevImage() {
+  if (currentImage > 0) {
+    currentImage -= 1;
+  } else {
+    currentImage = images.length - 1;
+  }
+
+  openModal(currentImage);
+}
+
+//
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navItems = document.querySelectorAll('.nav-link')
+
+  const activeLink = localStorage.getItem('activeNavItem');
+
+  function removeActive() {
+    navItems.forEach(item => {
+      item.parentElement.classList.remove('active');
+    });
+  }
+
+  function addActive() {
+    if( activeLink) {
+      removeActive();
+      const activeELement = document.querySelector(`a[href="${activeLink}"]`);
+      if(activeELement) {
+        activeELement.parentElement.classList.add("active");
+      }
+    }
+  }
+
+  addActive();
+
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      localStorage.setItem('activeLink')
+    })
+  })
+
+})
+
 
