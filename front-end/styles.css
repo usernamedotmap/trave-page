@@ -411,13 +411,84 @@ footer .image-footer .text-image {
 
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 footer .image-footer .text-image h1 {
     color: white;
+}
+
+ .text-image .email-container {
+    background-color: transparent;
+    z-index: 100;
+     border: 1px solid rgba( 251, 251, 251, 0.3 );
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 25px;
+    backdrop-filter: blur(3.5px);
+    width: 300px;
+    align-items: center;
+    border-radius: 10%;
+}
+
+.text-image .email-container input {
+    padding: 10px;
+    border-radius: 20px;
+    border: rgba( 24, 4, 4, 0 );
+    background: rgba( 24, 4, 4, 0.2 );
+    height: 50px;
+}
+
+.email-container input::placeholder {
+    color: rgba( 11, 11, 11, 1 );;
+    font-size: 20px;
+    text-align: center;
+}
+
+.email-container input:focus {
+    font-size: 20px;
+}
+
+.text-image .email-container textarea {
+    padding: 10px;
+    border-radius: 20px;
+    border: rgba( 24, 4, 4, 0 );
+    background: rgba( 24, 4, 4, 0.2 );
+    height: 100px;
+}
+
+.email-container textarea::placeholder {
+    color: rgba( 11, 11, 11, 1 );;
+    font-size: 20px;
+    text-align: center;
+}
+
+.email-container textarea:focus {
+    font-size: 15px;
+}
+
+.email-container button {
+    background: rgba( 24, 4, 4, 0.2 );
+    border: 1px solid white;
+    width: 50%;
+    border-radius: 48px;
+    padding: 20px;
+     border: 1px solid rgba( 251, 251, 251, 0.3 );
+     font-size: 20px;
+     color: rgba( 251, 251, 251, 1 );
+     cursor: pointer;
+}
+
+
+
+
+.email-container button:hover {
+    animation: myAnim 2s ease-out 0s 1 normal forwards;
+   
 }
 
 
@@ -486,4 +557,51 @@ footer .image-footer img {
 .contacts .footer-text {
     color:  rgba(187, 187, 187, 0.45);;
     font-size: 17px;
+}
+
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
